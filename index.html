@@ -10,7 +10,7 @@
             const links = [
                 {
                     link: "v6",
-                    notes: "standard algorithm as of 2025-04-15",
+                    notes: "standard algorithm as of 2025-04-15 (left = low pass @ 1000 Hz, right = pitch shift (x0.5) then low pass @ 1000 Hz)",
                 },
                 {
                     link: "v6_no_dsp",
@@ -22,7 +22,15 @@
                 },
                 {
                     link: "v7a",
-                    notes: "same as v7_no_dsp except with the low pass filter and pitch shifting from v6",
+                    notes: "same as v7_no_dsp except with the low pass filter and pitch shifting from v6 (left = low pass @ 1000 Hz, right = pitch shift (x0.5) then low pass @ 1000 Hz)",
+                },
+                {
+                    link: "v7b",
+                    notes: "should reduce excess noise (left = low pass @ 600 Hz, right = pitch shift (x0.5) then low pass @ 600 Hz)",
+                },
+                {
+                    link: "v7c",
+                    notes: "should reduce excess nose, may increase treble sensation by reducing pitch shifting intensity (left = low pass @ 600 Hz, right = pitch shift (x0.75) then low pass @ 600 Hz)",
                 },
             ];
             const body = document.querySelector("body");
