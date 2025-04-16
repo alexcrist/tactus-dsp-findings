@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tactus</title>
+    </head>
+    <body>
+        <script>
+            const links = [
+                {
+                    link: "v6",
+                    notes: "standard algorithm as of 2025-04-15",
+                },
+                {
+                    link: "v6_no_dsp",
+                    notes: "low pass filter + pitch shifting disabled",
+                },
+            ];
+            const body = document.querySelector("body");
+            links.forEach(({ link, notes }) => {
+                const hr = document.createElement("hr");
+                body.append(hr);
+                const a = document.createElement("a");
+                a.href = `./${link}.html`;
+                a.target = "_blank";
+                a.innerHTML = `<h3>${link}</h3>`;
+                body.append(a);
+                const p = document.createElement("p");
+                p.innerText = notes;
+                body.append(p);
+            });
+        </script>
+    </body>
+</html>
