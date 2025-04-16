@@ -14,7 +14,15 @@
                 },
                 {
                     link: "v6_no_dsp",
-                    notes: "low pass filter + pitch shifting disabled",
+                    notes: "low pass filter + pitch shifting disabled (notice that there is weird volume oscillation even without any DSP)",
+                },
+                {
+                    link: "v7_no_dsp",
+                    notes: "fixes volume oscillation issue that existed in v6_no_dsp",
+                },
+                {
+                    link: "v7a",
+                    notes: "same as v7_no_dsp except with the low pass filter and pitch shifting from v6",
                 },
             ];
             const body = document.querySelector("body");
